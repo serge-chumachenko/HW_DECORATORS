@@ -22,7 +22,7 @@ def my_dec4zero(func):
         return func(x,y)
     return wrapper
 
-@type_check((int,float,Decimal))
+@type_check((int,float,Decimal,str))
 def summ(x,y):
     return x + y
 
@@ -39,7 +39,7 @@ def mul(x,y):
 def div(x,y):
     return x / y
 
-print(summ(547.54327,451.45673))
+print(summ('Hello ', 'World!'))
 print(sub(2.477,1.478))
 print(mul(Decimal(2.5),Decimal(2.5)))
 print(div(Decimal(5),Decimal(5.5)))
